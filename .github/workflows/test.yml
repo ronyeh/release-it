@@ -28,4 +28,4 @@ jobs:
       - run: git config --global user.name User
       - run: git config --global user.email user@example.org
       - run: npm install
-      - run: DEBUG=release-it:* npx ava test/github.js
+      - run: npm test
