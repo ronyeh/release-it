@@ -357,8 +357,9 @@ test('should skip checks', async t => {
   await t.notThrowsAsync(github.init());
 });
 
-test('should generate GitHub web release url', async t => {
+test.only('should generate GitHub web release url', async t => {
   const options = {
+    git,
     github: {
       pushRepo,
       release: true,
@@ -384,6 +385,7 @@ test('should generate GitHub web release url', async t => {
 
 test('should generate GitHub web release url for enterprise host', async t => {
   const options = {
+    git,
     github: {
       pushRepo: 'git://my-custom-host.org:user/repo',
       release: true,
